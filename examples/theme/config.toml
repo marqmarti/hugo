@@ -1,4 +1,22 @@
-languageCode = "en-us"
-title = "My New Hugo Site"
 baseURL = "http://example.org"
+title = "My New Hugo Site"
 theme = "hugo-default-theme"
+copyright = "Untitled"
+languageCode = "en-us"
+enableEmoji = true
+enableRobotsTXT = true
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+# Default language for multilingual support
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+# Multilingual Mode
+[languages]
+[languages.en]
+languageName = "English"
