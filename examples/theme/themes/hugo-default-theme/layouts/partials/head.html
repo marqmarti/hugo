@@ -1,0 +1,9 @@
+<head>
+  <meta charset="utf-8">
+  {{ .Hugo.Generator }}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Description }}">
+  <link rel="stylesheet" type="text/css" href="{{ "css/style.css" | relURL }}">
+</head>
