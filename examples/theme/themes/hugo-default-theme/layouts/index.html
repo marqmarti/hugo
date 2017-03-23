@@ -1,6 +1,21 @@
 {{ define "main" }}
   <main class="main" id="homepage">
     <h1>Hugo Default Theme</h1>
-    {{ .Content }}
+    <div>
+      <!-- Note that .Data.Pages is the equivalent of .Site.Pages on the homepage template. -->
+      {{ range first 10 .Data.Pages }}
+        <article>
+          <div class="summary">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h2>
+            {{ .Summary }}
+          </div>
+          {{ if .Truncated }}
+          <div class="read-more-link">
+            <a href="{{ .RelPermalink }}">Read More...</a>
+          </div>
+          {{ end }}
+        </article>
+      {{ end }}
+    </div>
   </main>
 {{ end }}
