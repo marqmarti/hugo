@@ -3,7 +3,9 @@
     <h1>Hugo Default Theme</h1>
     <div>
       <!-- Note that .Data.Pages is the equivalent of .Site.Pages on the homepage template. -->
-      {{ range first 10 .Data.Pages }}
+      {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+      {{ template "_internal/pagination.html" . }}
+      {{ range $paginator.Pages }}
         <article>
           <div class="summary">
             <h2><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h2>
