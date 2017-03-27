@@ -5,7 +5,7 @@ series = ""
 tags = ["elements", "getting started"]
 publishdate = ""
 draft = "false"
-description = ""
+description = "This page is a collection of all styled elements."
 
 +++
 
